@@ -1,3 +1,3 @@
 # RedGuy media
 
-Public image hosting for @redguy.fit Instagram posts.
+Public images and the posting pipeline for @redguy.fit. See PIPELINE.md.

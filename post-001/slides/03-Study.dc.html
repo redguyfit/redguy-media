@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>RedGuy carousel — The study slide</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#EF2020}a:hover{color:#B81818}
+</style>
+</helmet>
+<div style="width: 1080px; height: 1350px; box-sizing: border-box; padding: 80px 88px; background: #F5F3EE; display: flex; flex-direction: column; justify-content: space-between; font-family: Inter, sans-serif; color: #111111; position: relative; overflow: hidden">
+  <div style="display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 2">
+    <div></div>
+    <div style="border: 4px solid #111111; border-radius: 999px; padding: 8px 24px; font-size: 28px; font-weight: 800">3/7</div>
+  </div>
+  <div style="display: flex; flex-direction: column; gap: 28px; position: relative; z-index: 2; max-width: 580px">
+    <div style="align-self: flex-start; background: #EF2020; color: #FFFFFF; border-radius: 999px; padding: 10px 28px; font-size: 28px; font-weight: 800; letter-spacing: 2px">THE RESEARCH</div>
+    <div style="display: flex; align-items: baseline; gap: 20px">
+      <div style="font-family: 'Archivo Black', sans-serif; font-size: 240px; line-height: 0.9; color: #EF2020">49</div>
+      <div style="font-family: 'Archivo Black', sans-serif; font-size: 60px; line-height: 1">studies</div>
+    </div>
+    <div style="display: flex; align-items: baseline; gap: 16px">
+      <div style="font-family: 'Archivo Black', sans-serif; font-size: 96px; line-height: 1">1,863</div>
+      <div style="font-size: 38px; font-weight: 800">lifters</div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 12px; border-top: 4px solid #111111; padding-top: 16px; font-size: 24px; font-weight: 600; color: #444444">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#444444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h14v16H6a2 2 0 0 0-2 2.5zM8 7h8"/></svg>
+      Morton et al., Br J Sports Med, 2018
+    </div>
+  </div>
+  <div style="display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 2">
+    <div style="display: flex; align-items: center; gap: 20px">
+      <img src="/_blob/4de31f82ad4eca707d8d7ee0c37b510e" alt="RedGuy avatar" style="width: 96px; height: 96px">
+      <div style="font-family: 'Archivo Black', sans-serif; font-size: 40px; letter-spacing: 1px"><span style="color: #EF2020">RED</span>GUY</div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 12px; font-size: 30px; font-weight: 800">Swipe
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </div>
+  </div>
+  <img src="/_blob/5681d5b9e64701e6b624b64ead63e91a" alt="RedGuy curling a dumbbell" style="position: absolute; height: 800px; right: -55px; bottom: 235px; z-index: 1">
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1080,"height":1350}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>
