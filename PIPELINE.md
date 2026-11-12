@@ -11,6 +11,7 @@ Owner: Henere. Every carousel needs his approval before it publishes.
   `https://raw.githubusercontent.com/redguyfit/redguy-media/main/post-NNN/NN.jpg`
 - Brand: background #F5F3EE, red #EF2020, black #111111, cyan #06B6D4. Headlines Archivo Black, body Inter.
 - Timezone: Pacific/Tahiti (UTC-10). 07:00 Tahiti = 17:00 UTC.
+- Audience: men 18–40. Every post opens on a common problem (chest, biceps, triceps, back, hypertrophy) and answers it with one study.
 
 ## Repo layout
 - `templates/` 7 slide templates (01-hook, 02-problem, 03-bignumber, 04-point, 05-list, 06-takeaway, 07-cta).
