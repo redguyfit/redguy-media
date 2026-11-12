@@ -1,6 +1,6 @@
 # Exercise poses to generate
 
-Save each as a transparent PNG in `assets/poses/` with the file name below. Portrait, roughly 700×1240 px like the existing poses.
+Save each as a transparent PNG (a JPG with a baked-in checkerboard is fine: `python3 -I tools/cutout.py in.jpg assets/poses/name.png` removes it) in `assets/poses/` with the file name below. Portrait, roughly 700×1240 px like the existing poses.
 
 ## Style block (paste before every prompt, and attach crossed.png as the character reference)
 
@@ -12,7 +12,7 @@ Equipment in black and dark grey only.
 
 ## Push
 
-1. **incline-press.png** — Incline dumbbell press. Lying on a black adjustable bench set at about 30°, three-quarter
+1. ✅ **incline-press.png** — Incline dumbbell press. Lying on a black adjustable bench set at about 30°, three-quarter
    side view from his left. Bottom of the rep: dumbbells just beside the upper chest, elbows slightly below the bench,
    forearms vertical, feet flat on the floor.
 2. **bench-press.png** — Barbell bench press. Lying on a flat bench, side view. Bar lowered to mid-chest, hands a bit
