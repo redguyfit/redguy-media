@@ -1,0 +1,13 @@
+{
+  "title": "The Push Workout",
+  "subtitle": "Science-backed",
+  "outro": ["Save it for", "push day."],
+  "exercises": [
+    {"name": "Incline DB Press", "muscle": "Upper chest", "sets": "3 × 8–12", "why": "The incline puts the upper chest to work", "pose": "assets/poses/dumbbell.png", "placeholder": true},
+    {"name": "Bench Press", "muscle": "Chest", "sets": "3 × 6–10", "why": "Your heaviest press: most load for the chest", "pose": "assets/poses/crossed.png", "placeholder": true},
+    {"name": "DB Shoulder Press", "muscle": "Front delts", "sets": "3 × 8–12", "why": "Dumbbells let your shoulders move freely", "pose": "assets/poses/flex.png", "placeholder": true},
+    {"name": "Lateral Raise", "muscle": "Side delts", "sets": "3 × 12–20", "why": "Side delts make shoulders look wider", "pose": "assets/poses/thumbsup.png", "placeholder": true},
+    {"name": "Dips", "muscle": "Chest + triceps", "sets": "3 × 8–12", "why": "Deep stretch for lower chest and triceps", "pose": "assets/poses/point.png", "placeholder": true},
+    {"name": "Overhead Triceps Ext.", "muscle": "Triceps", "sets": "3 × 10–15", "why": "Trains triceps in a deep stretch", "pose": "assets/poses/thumbsdown.png", "placeholder": true}
+  ]
+}

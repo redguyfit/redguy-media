@@ -1,0 +1,142 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'Archivo Black';src:url('../tools/archivo-black.woff2') format('woff2');}
+*{box-sizing:border-box}
+body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#F5F3EE;font-family:Inter,sans-serif;color:#111;position:relative}
+.red{color:#EF2020}
+.title{position:absolute;top:110px;left:0;right:0;text-align:center;font-family:'Archivo Black';font-size:78px;text-transform:uppercase;line-height:1}
+.tag{position:absolute;top:205px;left:50%;transform:translateX(-50%);background:#EF2020;color:#fff;border-radius:999px;padding:8px 26px;font-size:28px;font-weight:800;letter-spacing:2px;white-space:nowrap}
+.steps{position:absolute;top:290px;left:90px;right:90px;display:flex;align-items:center}
+.st{width:78px;height:78px;border-radius:50%;border:6px solid #C9C5BC;background:#F5F3EE;display:flex;align-items:center;justify-content:center;font-family:'Archivo Black';font-size:34px;color:#B5B0A6;flex-shrink:0;transition:none}
+.st.cur{border-color:#EF2020;color:#EF2020;transform:scale(1.15);box-shadow:0 0 0 8px rgba(239,32,32,.15)}
+.st.done{border-color:#EF2020;background:#EF2020;color:#fff}
+.ln{flex:1;height:6px;background:#C9C5BC}
+.ln.done{background:#EF2020}
+.scene{position:absolute;inset:0;opacity:0;animation:show var(--d) linear var(--s) both}
+@keyframes show{0%{opacity:0}4%{opacity:1}96%{opacity:1}100%{opacity:0}}
+.chip{position:absolute;top:420px;left:50%;margin-left:-200px;width:400px;text-align:center;background:#111;color:#fff;border-radius:999px;padding:12px 0;font-size:30px;font-weight:800;letter-spacing:2px}
+.pose{position:absolute;top:500px;left:50%;height:760px;transform:translateX(-50%);animation:slidein .45s cubic-bezier(.2,1.3,.4,1) var(--ps) both}
+@keyframes slidein{from{transform:translateX(-50%) translateY(80px) scale(.9);opacity:0}to{transform:translateX(-50%);opacity:1}}
+.ph{position:absolute;left:50%;transform:translateX(-50%) rotate(-6deg);background:#FFE14D;border:4px dashed #111;padding:8px 20px;font-size:26px;font-weight:800;z-index:3}
+.txt{position:absolute;top:1270px;left:90px;right:90px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px}
+.nm{font-family:'Archivo Black';font-size:68px;line-height:1.05}
+.sets{font-family:'Archivo Black';font-size:56px;color:#EF2020}
+.why{font-size:34px;font-weight:800;color:#333}
+.src{font-size:24px;font-weight:600;color:#666}
+.pop{animation:pop .35s cubic-bezier(.2,1.6,.4,1) var(--w) both}
+@keyframes pop{from{transform:scale(0);opacity:0}to{transform:none;opacity:1}}
+.up{animation:up .4s ease-out var(--w) both}
+@keyframes up{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+.intro{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;opacity:0;animation:show 1.40s linear 0s both}
+.intro .big{font-family:'Archivo Black';font-size:110px;text-transform:uppercase;line-height:1;text-align:center}
+.outro{position:absolute;inset:0;background:#111;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:40px;opacity:0;animation:show 2.40s linear 18.20s both;z-index:4}
+.outro .big{font-family:'Archivo Black';font-size:104px;line-height:1.02;text-align:center}
+.outro img{height:640px}
+.fol{background:#EF2020;border-radius:999px;padding:20px 40px;font-size:40px;font-weight:800}
+.wm{position:absolute;left:90px;top:1590px;display:flex;align-items:center;gap:16px;z-index:5}
+.wm img{width:72px;height:72px}
+.wm div{font-family:'Archivo Black';font-size:32px}
+.intro-hide{opacity:1}
+</style></head><body>
+
+<div id="head">
+  <div class="title">The Push Workout</div>
+  <div class="tag">SCIENCE-BACKED</div>
+  <div class="steps"><div class="st" id="st0"><span>1</span></div><div class="ln"></div><div class="st" id="st1"><span>2</span></div><div class="ln"></div><div class="st" id="st2"><span>3</span></div><div class="ln"></div><div class="st" id="st3"><span>4</span></div><div class="ln"></div><div class="st" id="st4"><span>5</span></div><div class="ln"></div><div class="st" id="st5"><span>6</span></div></div>
+</div>
+
+<div class="intro"><div class="big pop" style="--w:.1s">6 exercises</div><div class="big pop red" style="--w:.45s">Save it.</div></div>
+
+
+<div class="scene" style="--s:1.40s;--d:2.80s">
+  <div class="chip pop" style="--w:1.45s">UPPER CHEST</div>
+  <img class="pose" src="../assets/poses/dumbbell.png" style="--ps:1.45s">
+  <div class="ph" style="top:560px">PLACEHOLDER POSE</div>
+  <div class="txt">
+    <div class="nm pop" style="--w:1.70s">Incline DB Press</div>
+    <div class="sets pop" style="--w:1.95s">3 × 8–12</div>
+    <div class="why up" style="--w:2.20s">The incline puts the upper chest to work</div>
+    
+  </div>
+</div>
+<div class="scene" style="--s:4.20s;--d:2.80s">
+  <div class="chip pop" style="--w:4.25s">CHEST</div>
+  <img class="pose" src="../assets/poses/crossed.png" style="--ps:4.25s">
+  <div class="ph" style="top:560px">PLACEHOLDER POSE</div>
+  <div class="txt">
+    <div class="nm pop" style="--w:4.50s">Bench Press</div>
+    <div class="sets pop" style="--w:4.75s">3 × 6–10</div>
+    <div class="why up" style="--w:5.00s">Your heaviest press: most load for the chest</div>
+    
+  </div>
+</div>
+<div class="scene" style="--s:7.00s;--d:2.80s">
+  <div class="chip pop" style="--w:7.05s">FRONT DELTS</div>
+  <img class="pose" src="../assets/poses/flex.png" style="--ps:7.05s">
+  <div class="ph" style="top:560px">PLACEHOLDER POSE</div>
+  <div class="txt">
+    <div class="nm pop" style="--w:7.30s">DB Shoulder Press</div>
+    <div class="sets pop" style="--w:7.55s">3 × 8–12</div>
+    <div class="why up" style="--w:7.80s">Dumbbells let your shoulders move freely</div>
+    
+  </div>
+</div>
+<div class="scene" style="--s:9.80s;--d:2.80s">
+  <div class="chip pop" style="--w:9.85s">SIDE DELTS</div>
+  <img class="pose" src="../assets/poses/thumbsup.png" style="--ps:9.85s">
+  <div class="ph" style="top:560px">PLACEHOLDER POSE</div>
+  <div class="txt">
+    <div class="nm pop" style="--w:10.10s">Lateral Raise</div>
+    <div class="sets pop" style="--w:10.35s">3 × 12–20</div>
+    <div class="why up" style="--w:10.60s">Side delts make shoulders look wider</div>
+    
+  </div>
+</div>
+<div class="scene" style="--s:12.60s;--d:2.80s">
+  <div class="chip pop" style="--w:12.65s">CHEST + TRICEPS</div>
+  <img class="pose" src="../assets/poses/point.png" style="--ps:12.65s">
+  <div class="ph" style="top:560px">PLACEHOLDER POSE</div>
+  <div class="txt">
+    <div class="nm pop" style="--w:12.90s">Dips</div>
+    <div class="sets pop" style="--w:13.15s">3 × 8–12</div>
+    <div class="why up" style="--w:13.40s">Deep stretch for lower chest and triceps</div>
+    
+  </div>
+</div>
+<div class="scene" style="--s:15.40s;--d:2.80s">
+  <div class="chip pop" style="--w:15.45s">TRICEPS</div>
+  <img class="pose" src="../assets/poses/thumbsdown.png" style="--ps:15.45s">
+  <div class="ph" style="top:560px">PLACEHOLDER POSE</div>
+  <div class="txt">
+    <div class="nm pop" style="--w:15.70s">Overhead Triceps Ext.</div>
+    <div class="sets pop" style="--w:15.95s">3 × 10–15</div>
+    <div class="why up" style="--w:16.20s">Trains triceps in a deep stretch</div>
+    
+  </div>
+</div>
+
+<div class="outro">
+  <img class="pop" style="--w:18.25s" src="../assets/poses/flex.png">
+  <div class="big pop" style="--w:18.45s">Save it for<br><span class="red">push day.</span></div>
+  <div class="fol pop" style="--w:18.70s">Follow @redguy.fit</div>
+</div>
+
+<div class="wm"><img src="../assets/avatar.png"><div><span class="red">RED</span><span id="guy">GUY</span></div></div>
+
+<script>
+const N=6, INTRO=1400.0, STEP=2800.0;
+window.setT=function(ms){
+  document.getAnimations().forEach(a=>{a.pause();a.currentTime=ms;});
+  document.getElementById('guy').style.color = ms>=18199.999999999996 ? '#fff' : '#111';
+  const cur=Math.floor((ms-INTRO)/STEP);
+  for(let i=0;i<N;i++){
+    const el=document.getElementById('st'+i);
+    el.className='st'+(i<cur?' done':(i===cur&&ms>=INTRO?' cur':''));
+    el.firstChild.textContent = i<cur ? '✓' : String(i+1);
+    const ln=el.nextElementSibling; if(ln&&ln.classList.contains('ln')) ln.className='ln'+(i<cur?' done':'');
+  }
+};
+</script>
+</body></html>

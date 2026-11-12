@@ -93,8 +93,9 @@ def main():
         add(sfx, whoosh(rng), float(m.group(1)) - .1, .5)
     for m in re.finditer(r'class="[^"]*pop[^"]*"[^>]*--w:([\d.]+)s', html):
         add(sfx, pop(), float(m.group(1)) + .05, .5)
-    for i in range(10):
-        add(sfx, tick(), 6.6 + i * .09, .35)
+    if 'id="cnt"' in html:
+        for i in range(10):
+            add(sfx, tick(), 6.6 + i * .09, .35)
     mix = music * .55 + sfx
     fade = int(SR * 1.2); mix[-fade:] *= np.linspace(1, 0, fade)
     mix[:int(SR * .05)] *= np.linspace(0, 1, int(SR * .05))
