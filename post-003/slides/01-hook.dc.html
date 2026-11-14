@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>RedGuy carousel — Hook slide</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#EF2020}a:hover{color:#B81818}
+</style>
+</helmet>
+<div style="width: 1080px; height: 1350px; box-sizing: border-box; padding: 80px 88px; background: #F5F3EE; display: flex; flex-direction: column; justify-content: space-between; font-family: Inter, sans-serif; color: #111111; position: relative; overflow: hidden">
+  <div style="display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 2">
+    <div></div>
+    <div style="border: 4px solid #111111; border-radius: 999px; padding: 8px 24px; font-size: 28px; font-weight: 800">1/7</div>
+  </div>
+  <div style="display: flex; flex-direction: column; gap: 36px; position: relative; z-index: 2; max-width: 580px">
+    <h1 style="margin: 0; font-family: 'Archivo Black', sans-serif; font-size: 96px; line-height: 1.0; text-transform: uppercase">Upper chest <span style="color: #EF2020">not growing?</span></h1>
+    <div style="align-self: flex-start; display: flex; align-items: center; gap: 14px; background: #111111; color: #FFFFFF; border-radius: 999px; padding: 16px 32px; font-size: 32px; font-weight: 800">Swipe
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </div>
+  </div>
+  <div style="display: flex; align-items: center; gap: 20px; position: relative; z-index: 2"><img src="/_blob/4de31f82ad4eca707d8d7ee0c37b510e" alt="RedGuy avatar" style="width: 96px; height: 96px"><div style="font-family: 'Archivo Black', sans-serif; font-size: 40px; letter-spacing: 1px"><span style="color: #EF2020">RED</span>GUY</div></div>
+  <img src="/_blob/89e14405c6c7147161b4d4ba422b1dd6" alt="RedGuy standing with arms crossed" style="position: absolute; height: 1080px; right: -70px; bottom: 78px; z-index: 1">
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1080,"height":1350}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>
