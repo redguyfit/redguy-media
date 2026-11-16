@@ -1,5 +1,7 @@
 # Exercise poses to generate
 
+**Priority (15 Nov 2026):** exercise poses 6, 7, 4, 13, 8, 10 first — the best-performing posts in the niche are cheat sheets with the mascot doing each exercise. Also a set of 'muscle highlight' busts (front and back, standing, arms by the sides) with one muscle tinted cyan: chest, upper back, lats, side delts, biceps, triceps, forearms, quads, hamstrings, calves, abs.
+
 Save each as a transparent PNG (a JPG with a baked-in checkerboard is fine: `python3 -I tools/cutout.py in.jpg assets/poses/name.png` removes it) in `assets/poses/` with the file name below. Portrait, roughly 700×1240 px like the existing poses.
 
 ## Style block (paste before every prompt, and attach crossed.png as the character reference)
