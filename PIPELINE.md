@@ -11,7 +11,30 @@ Owner: Henere. Every carousel needs his approval before it publishes.
   `https://raw.githubusercontent.com/redguyfit/redguy-media/main/post-NNN/NN.jpg`
 - Brand: background #F5F3EE, red #EF2020, black #111111, cyan #06B6D4. Headlines Archivo Black, body Inter.
 - Timezone: Pacific/Tahiti (UTC-10). 07:00 Tahiti = 17:00 UTC.
-- Audience: men 18–40. Every post opens on a common problem (chest, biceps, triceps, back, hypertrophy) and answers it with one study.
+- Audience: men 18–40. Every post opens on something they physically feel in the gym or in their body
+  (sore for days, shoulder pinch on bench, can't feel the chest, no pump, elbow pain, strength stuck…) and gives a simple, practical fix.
+  No study hunt per post (Henere, 15 Nov 2026). See "Content rules" and "Variety rules" below.
+
+## Content rules (Henere, 15 Nov 2026)
+- Topic = a recurring sensation or frustration, from `content/queue.md`. Answer = 2–4 concrete fixes (technique, setup, rest, food, sleep).
+- Plain, well-known coaching advice. No study per post, no study slide, no source line by default.
+- Only put a number or "research shows" on a slide if it is common, settled knowledge you can state safely
+  (e.g. "48–72 h" soreness window) — otherwise say it without a number. Never invent a figure or a citation.
+- Pain topics: technique and setup tips only, plus one line "Sharp or lasting pain → see a physio." No diagnosis.
+
+## Variety rules (Henere, 15 Nov 2026) — it must not look automated
+- Rotate the format; never the same format two posts in a row. Formats:
+  A. Problem → fixes (hook, problem, 2–3 fix slides, takeaway, CTA)
+  B. Do this / Not this (each slide: ❌ wrong vs ✅ right)
+  C. Quick checklist (hook, one slide listing 3–5 checks, one slide per check, CTA)
+  D. Myth vs truth (hook, myth, truth, why, fix, CTA)
+  E. "Try this next set" (hook, one drill or cue, step slides, CTA)
+- Change the layout, not only the words: move the headline (top/middle/bottom), switch light/dark slides, change box styles, slide count 5–8.
+- RedGuy: never the same pose on the same slide type as the previous post. Mirror (`transform: scaleX(-1)`), move him left/right,
+  change size and crop between posts. Use the exercise poses (incline-press and any new ones in `assets/poses/`) whenever they fit.
+- Hook wording, caption opening line, CTA line and question must differ from the last 3 posts (check their caption.txt).
+- Log the format and the poses used per slide in `content/log.md` so the next run can avoid repeats.
+- When a pose that would fit is missing, use the closest one and add it to `assets/poses/POSES-TODO.md` for Henere.
 
 ## Repo layout
 - `templates/` 7 slide templates (01-hook, 02-problem, 03-bignumber, 04-point, 05-list, 06-takeaway, 07-cta).
@@ -23,13 +46,12 @@ Owner: Henere. Every carousel needs his approval before it publishes.
 
 ## Evening run (daily, ~16:45 Tahiti): make tomorrow's post
 1. Read `content/log.md` and `content/queue.md`. Take the first queue topic not in the log. Next number = last post + 1.
-2. Research before writing. Open the study's PubMed page (or the full text) with WebFetch and confirm every number you will use.
-   A number you cannot confirm from a page you opened does not go on a slide. Note established vs uncertain evidence.
+2. No study research (see Content rules). Pick 2–4 practical fixes for the sensation. Read the last 3 posts' caption.txt and log rows to avoid repeating format, poses and wording.
 3. Write the slides: copy `templates/` into `post-NNN/slides/`, change only text, counters and poses.
    - Hook ≤ 8 words. Every other slide ≤ 10 words, one idea. 5–8 slides total (drop or duplicate the point/list templates as needed).
-   - One small source line (Author et al., Journal, Year) on the slide that states the finding.
+   - No source line unless a slide states a research finding (rare; see Content rules).
    - Counters `N/total` must match. Watermark (avatar + REDGUY) stays bottom-left.
-   - Poses: hook = crossed, problem/myth = thumbsdown, research = dumbbell or point, nutrition = eating, takeaway = thumbsup, CTA = flex.
+   - Poses: follow the Variety rules (no fixed pose per slide type). Pick poses that match the slide's meaning; vary mirror, side and size.
      If a topic really needs a pose that does not exist, use the closest one and tell Henere which pose to generate.
    - Never copy BlueBro's posts, wording or product names.
 4. Render: `pip install --break-system-packages playwright` if missing (and `python3 -m playwright install chromium` if no Chrome).
@@ -41,7 +63,7 @@ Owner: Henere. Every carousel needs his approval before it publishes.
    (same claims as the slides, nothing new). Keep text clear of the mascot and of the bottom 300 px and right 120 px (Instagram UI).
    `python3 -I tools/reel.py post-NNN/reel/reel.html post-NNN/reel.mp4 16 30`. Check frames at ~1.8, 5, 8.8, 12.2, 15 s
    (ffmpeg -ss … -frames:v 1) and fix overlaps.
-6. Write `post-NNN/caption.txt`: hook line · one sentence naming the study (authors, journal, year) and the finding ·
+6. Write `post-NNN/caption.txt`: hook line (new wording) · 1–2 sentences on why it happens ·
    the rule in one line · a question that invites a one-word comment · "Save this. Follow @redguy.fit for gym science, drawn simple." ·
    5 hashtags. Under 2,200 characters.
 7. Commit and push (`git -c user.name=redguyfit -c user.email=redguyfit@users.noreply.github.com`), then check each image URL returns 200 image/jpeg.

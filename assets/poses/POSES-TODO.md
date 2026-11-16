@@ -55,3 +55,13 @@ Equipment in black and dark grey only.
 - Same face mask, cyan eyes, wristbands and shoes as the existing poses.
 - Hands actually holding the equipment (no extra or melted fingers), correct number of plates on both bar ends.
 - No text or watermark anywhere. Background fully transparent.
+
+## Feelings (for the new "what you feel" posts — high priority)
+
+16. **sore-shoulder.png** — Standing, front three-quarter view, one hand holding the opposite shoulder, wincing (eyes squinted).
+17. **sore-legs.png** — Walking stiffly, slightly bent knees, one hand on the thigh, grimace. Side view.
+18. **tired.png** — Sitting on a flat bench, elbows on knees, head down, towel over the neck.
+19. **confused.png** — Standing, scratching the back of the head, one eyebrow raised (mask wrinkle), shrug.
+20. **pump.png** — Front double biceps, arms visibly bigger, small cyan sparkle lines around the arms.
+21. **stretch.png** — Doorway-style chest stretch: one forearm on a black vertical post, chest turned away. Side view.
+22. **wrist.png** — Standing, holding one wrist with the other hand, looking at it. Front view.
