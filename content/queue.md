@@ -1,39 +1,39 @@
 # Content queue (in order)
 
-Audience: men 18–40. Each post starts from something they FEEL (in the gym or the next day) and gives a simple fix.
-No study hunt per post (Henere, 15 Nov 2026). See PIPELINE.md "Content rules" and "Variety rules".
+Audience: men 18–40. Alternate two families: FEEL = something they feel in the gym / the next day; INSEC = a male insecurity and how to fix it.
+No study hunt per post (Henere, 15 Nov 2026). See PIPELINE.md "Content rules", "Variety rules" and "Reels".
 Suggested format is a starting point; never use the same format two posts in a row.
-Pain topics: technique tips only + "Sharp or lasting pain → see a physio."
+Pain topics: technique tips only + "Sharp or lasting pain → see a physio." Insecurity topics: encouraging, never shaming.
 
-| # | What they feel (hook idea) | Area | Suggested format |
-|---|---|---|---|
-| 001 | How much protein do you actually need? | Nutrition | (done) |
-| 002 | Light weights build muscle too | Hypertrophy | (done) |
-| 003 | Upper chest not growing? Incline vs flat bench | Chest | (done) |
-| 004 | Shoulder pinches when you bench | Chest / Shoulders | B. Do this / Not this |
-| 005 | Sore for 3 days after leg day | Recovery | D. Myth vs truth |
-| 006 | Can't feel your chest, only arms and shoulders | Chest | E. Try this next set |
-| 007 | No pump in your arms | Biceps / Triceps | C. Quick checklist |
-| 008 | Elbows ache on skull crushers | Triceps | B. Do this / Not this |
-| 009 | Lower back burns on rows | Back | A. Problem → fixes |
-| 010 | Your grip dies before your back does | Back | E. Try this next set |
-| 011 | Wrists hurt on bench and push-ups | Chest | B. Do this / Not this |
-| 012 | Forearms burn before your biceps on curls | Biceps | C. Quick checklist |
-| 013 | Bench stuck at the same weight for weeks | Chest | A. Problem → fixes |
-| 014 | Pulldowns: arms do all the work | Back | E. Try this next set |
-| 015 | Always tired and flat at the gym | Recovery | C. Quick checklist |
-| 016 | Traps take over on lateral raises | Shoulders | B. Do this / Not this |
-| 017 | Knees hurt when you squat | Legs | A. Problem → fixes |
-| 018 | Skinny, always full, can't eat more | Nutrition | C. Quick checklist |
-| 019 | Out of breath after 5 reps of squats | Legs | D. Myth vs truth |
-| 020 | Shoulder clicks on overhead press | Shoulders | B. Do this / Not this |
-| 021 | Cramps in the middle of your workout | Recovery | C. Quick checklist |
-| 022 | Feel small and flat after a bad night | Recovery | D. Myth vs truth |
-| 023 | Biceps look flat even after curls | Biceps | A. Problem → fixes |
-| 024 | Lats never sore, back never grows | Back | E. Try this next set |
-| 025 | Neck tight after shrugs and deadlifts | Back | B. Do this / Not this |
-| 026 | Belly stays while arms stay skinny | Nutrition | D. Myth vs truth |
-| 027 | Dizzy or sick after a hard set | Recovery | C. Quick checklist |
-| 028 | Chest only sore on one side | Chest | A. Problem → fixes |
-| 029 | Triceps never sore, arms never grow | Triceps | E. Try this next set |
-| 030 | Pain in the front of the shoulder on dips | Chest / Triceps | B. Do this / Not this |
+| # | Hook idea | Family | Area | Suggested format |
+|---|---|---|---|---|
+| 001 | How much protein do you actually need? | — | Nutrition | (done) |
+| 002 | Light weights build muscle too | — | Hypertrophy | (done) |
+| 003 | Upper chest not growing? Incline vs flat bench | — | Chest | (done) |
+| 004 | Skinny arms in a T-shirt? Fix this first | INSEC | Arms | A. Problem → fixes |
+| 005 | Shoulder pinches when you bench | FEEL | Chest / Shoulders | B. Do this / Not this |
+| 006 | Narrow shoulders? Build the side delts | INSEC | Shoulders | E. Try this next set |
+| 007 | Sore for 3 days after leg day | FEEL | Recovery | D. Myth vs truth |
+| 008 | Flat chest from the side | INSEC | Chest | C. Quick checklist |
+| 009 | Can't feel your chest, only arms and shoulders | FEEL | Chest | E. Try this next set |
+| 010 | Belly and love handles won't leave | INSEC | Nutrition | D. Myth vs truth |
+| 011 | No pump in your arms | FEEL | Biceps / Triceps | C. Quick checklist |
+| 012 | Scared everyone's watching you at the gym | INSEC | Mindset | A. Problem → fixes |
+| 013 | Elbows ache on skull crushers | FEEL | Triceps | B. Do this / Not this |
+| 014 | Skinny legs, big upper body | INSEC | Legs | B. Do this / Not this |
+| 015 | Lower back burns on rows | FEEL | Back | A. Problem → fixes |
+| 016 | Hunched posture makes you look smaller | INSEC | Back / Posture | E. Try this next set |
+| 017 | Your grip dies before your back does | FEEL | Back | C. Quick checklist |
+| 018 | Skinny guy, can't gain weight | INSEC | Nutrition | C. Quick checklist |
+| 019 | Wrists hurt on bench and push-ups | FEEL | Chest | B. Do this / Not this |
+| 020 | No V-shape: back looks narrow | INSEC | Back | A. Problem → fixes |
+| 021 | Bench stuck at the same weight for weeks | FEEL | Chest | D. Myth vs truth |
+| 022 | Thin forearms and wrists | INSEC | Arms | E. Try this next set |
+| 023 | Always tired and flat at the gym | FEEL | Recovery | C. Quick checklist |
+| 024 | Face looks puffy, no jawline | INSEC | Nutrition / Sleep | D. Myth vs truth |
+| 025 | Traps take over on lateral raises | FEEL | Shoulders | B. Do this / Not this |
+| 026 | "Man boobs" — what helps (doctor line) | INSEC | Chest | A. Problem → fixes |
+| 027 | Knees hurt when you squat | FEEL | Legs | B. Do this / Not this |
+| 028 | Training for months, still look the same | INSEC | Hypertrophy | C. Quick checklist |
+| 029 | Pulldowns: arms do all the work | FEEL | Back | E. Try this next set |
+| 030 | Short guy? Look bigger with this | INSEC | Shoulders / Back | D. Myth vs truth |

@@ -1,7 +1,8 @@
 """Render a RedGuy reel (HTML with CSS animations + window.setT(ms)) to a 1080x1920 MP4.
 
 Usage (from repo root):
-  python3 -I tools/reel.py <reel.html> <out.mp4> [seconds=16] [fps=30]
+  python3 -I tools/reel.py [--silent] <reel.html> <out.mp4> [seconds=16] [fps=30]
+  --silent: no soundtrack (for Henere to add a trending Instagram sound in the app).
 Frames are captured deterministically by pausing all animations at each timestamp.
 The soundtrack comes from tools/reel_audio.py (original synthesized beat + synced effects).
 """
@@ -9,6 +10,9 @@ import pathlib, subprocess, sys, tempfile
 
 
 def main():
+    silent = "--silent" in sys.argv
+    if silent:
+        sys.argv.remove("--silent")
     src = pathlib.Path(sys.argv[1]).resolve()
     out = pathlib.Path(sys.argv[2]).resolve()
     secs = float(sys.argv[3]) if len(sys.argv) > 3 else 16
@@ -24,13 +28,16 @@ def main():
             pg.evaluate(f"window.setT({i * 1000 / fps})")
             pg.screenshot(path=f"{tmp}/f{i:05d}.png")
         b.close()
-        wav = f"{tmp}/audio.wav"
-        subprocess.run([sys.executable, "-I", str(pathlib.Path(__file__).with_name("reel_audio.py")),
-                        str(src), wav, str(secs)], check=True, stdout=subprocess.DEVNULL)
-        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-framerate", str(fps), "-i", f"{tmp}/f%05d.png",
-                        "-i", wav,
-                        "-c:v", "libx264", "-pix_fmt", "yuv420p", "-profile:v", "high", "-crf", "20",
-                        "-c:a", "aac", "-shortest", "-movflags", "+faststart", str(out)], check=True)
+        vid = ["-c:v", "libx264", "-pix_fmt", "yuv420p", "-profile:v", "high", "-crf", "20"]
+        cmd = ["ffmpeg", "-y", "-loglevel", "error", "-framerate", str(fps), "-i", f"{tmp}/f%05d.png"]
+        if silent:
+            cmd += vid + ["-an", "-movflags", "+faststart", str(out)]
+        else:
+            wav = f"{tmp}/audio.wav"
+            subprocess.run([sys.executable, "-I", str(pathlib.Path(__file__).with_name("reel_audio.py")),
+                            str(src), wav, str(secs)], check=True, stdout=subprocess.DEVNULL)
+            cmd += ["-i", wav] + vid + ["-c:a", "aac", "-shortest", "-movflags", "+faststart", str(out)]
+        subprocess.run(cmd, check=True)
     print(out)
 
 
