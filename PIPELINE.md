@@ -2,6 +2,8 @@
 
 Runbook for the daily scheduled task. Phase 1 = 1 carousel a day at 07:00 Tahiti + 2 stories (07:00 and 12:00) + 1 Reel at 18:00.
 Owner: Henere. Every carousel needs his approval before it publishes.
+Since 15 Nov 2026 Henere posts himself in the app (to add trending sounds to carousels and Reels): send him the slides (zip), stories, silent reel.mp4,
+both captions and 2–3 trending sounds; do not schedule anything through Windsor unless he asks for it for that post.
 
 ## Fixed facts
 - Instagram: Windsor.ai for Social Media, connector `instagram`, account `17841447489554216` (@redguy.fit).
