@@ -17,12 +17,14 @@ Equipment in black and dark grey only.
 1. ✅ **incline-press.png** — Incline dumbbell press. Lying on a black adjustable bench set at about 30°, three-quarter
    side view from his left. Bottom of the rep: dumbbells just beside the upper chest, elbows slightly below the bench,
    forearms vertical, feet flat on the floor.
-2. **bench-press.png** — Barbell bench press. Lying on a flat bench, side view. Bar lowered to mid-chest, hands a bit
+2. ✅ **bench-press.png** (17 Nov; bar sits a bit high, over the upper chest) — Barbell bench press. Lying on a flat bench, side view. Bar lowered to mid-chest, hands a bit
    wider than shoulders, plates on both ends, feet planted. No rack uprights in front of his face.
 3. **shoulder-press.png** — Seated dumbbell shoulder press. Sitting upright on a bench with a vertical back pad, front
    three-quarter view. Arms fully extended overhead, dumbbells above the shoulders, slightly in front of the head.
 4. **lateral-raise.png** — Dumbbell lateral raise. Standing, front view. Arms raised out to the sides to shoulder height,
-   elbows slightly bent, dumbbells level with the shoulders, torso straight.
+   elbows slightly bent, dumbbells level with the shoulders, torso straight. Arms almost straight, forming a T with the body;
+   dumbbells out at the sides, NOT above the head (17 Nov attempt came out as a press → saved as shoulder-press-standing.png).
+   Extra: ✅ **shoulder-press-standing.png** (17 Nov) — standing dumbbell press, elbows at 90°, dumbbells at head height.
 5. **dips.png** — Parallel bar dips (bodyweight, no belt or plate). Front three-quarter view. Bottom of the rep: arms bent
    to about 90°, torso leaning slightly forward, knees bent with feet crossed behind.
 6. **overhead-triceps.png** — Overhead cable triceps extension. Standing facing away from a cable machine, staggered
