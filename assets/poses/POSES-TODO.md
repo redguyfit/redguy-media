@@ -62,7 +62,7 @@ Equipment in black and dark grey only.
 
 ## Feelings (for the new "what you feel" posts — high priority)
 
-16. **sore-shoulder.png** — Standing, front three-quarter view, one hand holding the opposite shoulder, wincing (eyes squinted).
+16. ✅ **sore-shoulder.png** (17 Nov; red pain bolts included, one wristband only) — Standing, front three-quarter view, one hand holding the opposite shoulder, wincing (eyes squinted).
 17. **sore-legs.png** — Walking stiffly, slightly bent knees, one hand on the thigh, grimace. Side view.
 18. **tired.png** — Sitting on a flat bench, elbows on knees, head down, towel over the neck.
 19. **confused.png** — Standing, scratching the back of the head, one eyebrow raised (mask wrinkle), shrug.
