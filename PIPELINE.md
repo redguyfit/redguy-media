@@ -47,6 +47,8 @@ both captions and 2–3 trending sounds; do not schedule anything through Windso
   Never copy BlueBro's wording, drawings, character, layouts one-to-one or product names; take the idea, not the execution.
 
 ## Reels (main reach tool)
+- One Reel a day, polished rather than more volume (Henere, 17 Nov 2026). Build the Reel first in the evening run (step 5b before
+  the slides), spend the extra time on the first 0.5 s hook and a clean loop, and check every frame. Reach: compare on Sundays.
 - Every post gets a Reel. Built to carry a trending sound Henere adds in the Instagram app (the API cannot attach Instagram music,
   and we never put copyrighted songs in our MP4s).
 - Render silent: `python3 -I tools/reel.py --silent post-NNN/reel/reel.html post-NNN/reel.mp4 <seconds> 30`.
