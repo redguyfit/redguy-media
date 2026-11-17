@@ -48,7 +48,7 @@ Equipment in black and dark grey only.
 
 ## Arms
 
-13. **incline-curl.png** — Incline dumbbell curl. Sitting back on a bench set at about 45°, front three-quarter view. Arms
+13. ✅ **incline-curl.png** (17 Nov; low arm at his side rather than behind, no wristband on that wrist) — Incline dumbbell curl. Sitting back on a bench set at about 45°, front three-quarter view. Arms
     hanging straight down behind the body (stretched position), palms forward, one arm optionally mid-curl.
 14. **preacher-curl.png** — Preacher curl. Seated at a preacher bench, side view. Upper arms resting on the angled pad,
     EZ bar about halfway up, elbows still on the pad.
