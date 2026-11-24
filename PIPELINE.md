@@ -1,9 +1,10 @@
 # RedGuy daily pipeline (Phase 1)
 
 Runbook for the daily scheduled task. Phase 1 = 1 carousel a day at 07:00 Tahiti + 2 stories (07:00 and 12:00) + 1 Reel at 18:00.
-Owner: Henere. Every carousel needs his approval before it publishes.
-Since 15 Nov 2026 Henere posts himself in the app (to add trending sounds to carousels and Reels): send him the slides (zip), stories, silent reel.mp4,
-both captions and 2–3 trending sounds; do not schedule anything through Windsor unless he asks for it for that post.
+Owner: Henere.
+Silent approval (Henere, 24 Nov 2026): the carousel + story.jpg publish through Windsor at 07:00 Tahiti and story2.jpg at 12:00
+unless he says **stop** or asks for changes before then. No reply = it publishes. The Reel is never auto-published: he posts it
+himself in the app with a trending sound (send him the silent reel.mp4, reel-caption.txt and 2–3 sounds), unless he says "post son RedGuy".
 
 ## Fixed facts
 - Instagram: Windsor.ai for Social Media, connector `instagram`, account `17841447489554216` (@redguy.fit).
@@ -68,6 +69,8 @@ both captions and 2–3 trending sounds; do not schedule anything through Windso
 - `tools/reel.py` Reel renderer (1080x1920 MP4, 16 s) with `tools/reel_audio.py` (original synthesized beat + synced effects, no licensing issues). Example: `post-002/reel/reel.html`.
 
 ## Evening run (daily, ~16:45 Tahiti): make tomorrow's post
+0. Backlog: if the last post in the log is "ready" but not published (and not posted by Henere in the app — check recent media via Windsor),
+   do not make a new post tonight. Resend that post (step 8) with the silent-approval notice and schedule it (step 9). Never two carousels a day.
 1. Read `content/log.md` and `content/queue.md`. Take the first queue topic not in the log. Next number = last post + 1.
 2. No study research (see Content rules). Pick 2–4 practical fixes for the sensation. Read the last 3 posts' caption.txt and log rows to avoid repeating format, poses and wording.
 3. Write the slides: copy `templates/` into `post-NNN/slides/`, change only text, counters and poses.
@@ -89,25 +92,29 @@ both captions and 2–3 trending sounds; do not schedule anything through Windso
    the rule in one line · a question that invites a one-word comment · "Save this. Follow @redguy.fit for gym science, drawn simple." ·
    5 hashtags. Under 2,200 characters.
 7. Commit and push (`git -c user.name=redguyfit -c user.email=redguyfit@users.noreply.github.com`), then check each image URL returns 200 image/jpeg.
-8. Send Henere a contact sheet of the slides and reel.mp4 (SendUserFile) and the caption (SendUserMessage). Ask (in French):
-   "Réponds **post** (je programme le carrousel ; je t'envoie le Reel muet à 18:00 pour que tu le postes avec le son tendance),
-   **post son RedGuy** (je publie aussi le Reel moi-même avec le son maison), ou dis-moi quoi changer."
+8. Send Henere a contact sheet of the slides and reel.mp4 (SendUserFile) and the caption (SendUserMessage), and a PushNotification. Say (in French):
+   "Le carrousel part demain à 07:00 (story 07:00, story2 12:00) sauf si tu réponds **stop** ou me dis quoi changer.
+   Le Reel muet : je te le renvoie à 18:00 pour que tu le postes avec le son tendance (ou réponds **post son RedGuy** et je le publie avec le son maison)."
    Include the 2–3 trending sound suggestions with the Reel.
-9. On "post": schedule with send_later, in this session:
-   - 07:00 Tahiti next day: `create_carousel_post` with the URLs in order and caption.txt, then `create_story` with story.jpg. Message Henere the result.
-   - 12:00 Tahiti same day: `create_story` with story2.jpg.
-   - 18:00 Tahiti same day, on "post" (default): remind Henere to post the silent reel.mp4 with the chosen trending sound
+9. Right after step 8 (no reply needed), schedule with send_later, in this session:
+   - 07:00 Tahiti next day: re-read this session. If Henere said stop, or asked for changes that are not done and pushed, publish nothing
+     and tell him. If he already posted this carousel in the app, or a carousel already went out today, skip. Otherwise check every image URL
+     returns 200 image/jpeg, then `create_carousel_post` with the URLs in order and caption.txt, then `create_story` with story.jpg.
+     Message Henere the result (media id) and update the log.
+   - 12:00 Tahiti same day: only if the carousel went out, `create_story` with story2.jpg.
+   - 18:00 Tahiti same day (default): remind Henere to post the silent reel.mp4 with the chosen trending sound
      and reel-caption.txt (send the MP4 again with SendUserFile and the sound suggestions).
    - Only on "post son RedGuy": `create_video_post` with
      video_url `https://raw.githubusercontent.com/redguyfit/redguy-media/main/post-NNN/reel-beat.mp4`, reel-caption.txt, share_to_feed true.
      raw.githubusercontent serves MP4 as application/octet-stream; if Instagram rejects it, tell Henere and send him the MP4 to post by hand.
-   Add the post to `content/log.md` (number, topic, date, status "scheduled") and push.
-   On changes: edit, re-render, push, send the new sheet, ask again. No reply = nothing is published.
+   Add the post to `content/log.md` (number, topic, date, status "scheduled (silent approval)") and push.
+   On changes: edit, re-render, push, send the new sheet; the 07:00 job publishes the pushed version. On "stop": delete the scheduled send_laters.
 10. Sundays: also pull the last 7 days of post stats through Windsor (`get_fields` then `get_data`, connector instagram):
     reach, saves, shares, follows per post. Compare Reels vs carousels and insecurity vs gym-feeling topics.
     Send a 5-line summary and whether to keep, raise or lower volume.
 
 ## Never
-- Publish without Henere's "post" for that specific carousel.
+- Publish a carousel Henere said "stop" to, or one with changes he asked for that are not done yet.
+- Auto-publish a Reel (he posts Reels himself unless he says "post son RedGuy").
 - Publish more than one carousel and one Reel a day in Phase 1.
 - Reply to comments or DMs as Henere.
